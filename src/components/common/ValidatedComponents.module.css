@@ -1,0 +1,20 @@
+.componentContainer {
+  position: relative;
+}
+
+.errorMessage {
+  position: absolute;
+  top: -13px;
+  min-width: 35%;
+  max-width: 70%;
+  padding: 3px;
+
+  background-color: rgb(255, 238, 228);
+  border: 1px solid #e2d2c9;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+.errorMessage:hover {
+  z-index: 10;
+}

@@ -1,0 +1,23 @@
+.nav {
+  grid-area: n;
+
+  background-color: #f1f1f1;
+}
+
+.nav > ul {
+  margin-bottom: 70px;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: gray;
+}
+
+.nav li a:hover, .nav li a.active {
+  color: #000;
+  font-weight: bold;
+}
+
+.active {
+  text-decoration: underline;
+}

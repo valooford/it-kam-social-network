@@ -1,0 +1,26 @@
+.message {
+  display: grid;
+
+  grid-template-columns: 50px 1fr;
+  grid-column-gap: 20px;
+}
+
+.info {
+  display: grid;
+}
+
+.info > * {
+  justify-self: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.text {
+  padding: 5px 10px;
+  border: solid 2px  #f1f1f1;
+  border-radius: 7px;
+}

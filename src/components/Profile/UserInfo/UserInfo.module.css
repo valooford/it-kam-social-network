@@ -1,0 +1,27 @@
+.userInfo {
+  position: absolute;
+  margin-top: -160px;
+  margin-left: 10px;
+  display: inline-block;
+  width: 50%;
+
+  color: white;
+  text-shadow: 2px 2px 2px #000;
+}
+
+.avatar {
+  float: left;
+  width: 140px;
+  margin-right: 10px;
+}
+
+.name {
+  font-size: 40px;
+  margin: 0;
+}
+
+.status {
+  margin-left: 10px;
+  font-size: 20px;
+  vertical-align: top;
+}

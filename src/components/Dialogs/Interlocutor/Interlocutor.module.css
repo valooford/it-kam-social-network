@@ -1,0 +1,31 @@
+.interlocutor {
+  display: inline-block;
+  height: 30px;
+  position: relative;
+  padding: 2px;
+  padding-left: 35px;
+}
+.interlocutor:hover {
+  cursor: pointer;
+}
+
+.avatar {
+  position: absolute;
+  /* top: 0; */
+  left: 0;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.name {
+  color: #333;
+  text-decoration: none;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.name_active, .interlocutor:hover .name {
+  font-weight: bold;
+}
