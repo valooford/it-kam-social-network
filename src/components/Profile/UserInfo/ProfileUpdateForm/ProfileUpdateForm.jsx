@@ -4,8 +4,8 @@ import { reduxForm, Field } from 'redux-form';
 
 function ProfileUpdateForm(props) {
   return <form className={styles.form} onSubmit={props.handleSubmit}>
-    <button onClick={props.onCloseWithoutSubmit}>Exit</button>
-    <button type="sumbit">Save</button>
+    <button type='button' onClick={props.onCloseWithoutSubmit}>Exit</button>
+    <button type='submit'>Save</button>
     {props.error && <span className={styles.error}>{props.error}</span>}
     <div className={styles.fields}>
       <label htmlFor='fullName'>Full name: </label><Field component='input' name='fullName' id='fullName' />
