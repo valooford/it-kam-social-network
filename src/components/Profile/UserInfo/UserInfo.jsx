@@ -6,7 +6,7 @@ import ProfileUpdateForm from './ProfileUpdateForm/ProfileUpdateForm';
 function UserInfo(props) {
   const {
     profileInfo: {
-      photos: {small: photo}, 
+      photos: {large: photo}, 
       fullName, 
       aboutMe,
       contacts,
@@ -17,7 +17,8 @@ function UserInfo(props) {
     statusText,
     myProfile,
     updateUserStatus,
-    updateProfileInfo
+    updateProfileInfo,
+    updateProfileAvatar
   } = props;
 
   const [editMode, setEditMode] = useState(false);
@@ -32,12 +33,21 @@ function UserInfo(props) {
       exitEditMode();
     }, (error) => {console.log(error)});
   }
+  function uploadPhoto(e) {
+    updateProfileAvatar(e.target.files[0]);
+  }
 
   return (
     <div className={styles.container}>
-      <img  className={styles.avatar} 
-            src={photo || "https://media.wired.com/photos/598e35fb99d76447c4eb1f28/1:1/w_722,h_722,c_limit/phonepicutres-TA.jpg"} 
-            alt='User' />
+      <span className={styles.avatar}>
+        <img  className={styles.avatar__image} 
+              src={photo || "https://media.wired.com/photos/598e35fb99d76447c4eb1f28/1:1/w_722,h_722,c_limit/phonepicutres-TA.jpg"} 
+              alt='User' />
+        {myProfile && <div className={styles.avatar__upload}>
+          <input type='file' onChange={uploadPhoto} className={styles.avatar__uploadButton} id='avatarFileInput' />
+          <label className={styles.avatar__uploadLabel} htmlFor='avatarFileInput'>Upload</label>
+        </div>}
+      </span>
       <div className={styles.userInfo}>
         <p className={styles.name}>
           {fullName}

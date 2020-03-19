@@ -2,7 +2,7 @@ import React from 'react';
 import Profile from './Profile';
 import { withRouter, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getProfileData, getUserStatus, updateUserStatus, updateProfileInfo } from '../../redux/profile-reducer';
+import { getProfileData, getUserStatus, updateUserStatus, updateProfileInfo, updateProfileAvatar } from '../../redux/profile-reducer';
 import Preloader from '../common/Preloader';
 import { withAuthRedirect } from '../../hoc/withAuthRedirect';
 import { compose } from 'redux';
@@ -43,6 +43,6 @@ function mapDispatchToProps(dispatch) {
 export default compose(
   withRouter,
   withAuthRedirect,
-  connect(mapStateToProps, { getProfileData, getUserStatus, updateUserStatus }),
+  connect(mapStateToProps, { getProfileData, updateProfileAvatar, getUserStatus, updateUserStatus }),
   connect(null, mapDispatchToProps)
 )(ProfileContainer)

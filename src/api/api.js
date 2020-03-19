@@ -21,13 +21,23 @@ export function getAuthInfo() {
   return defaultRequest.get("auth/me").then(response => response.data);
 };
 
-// Get profile info
+// Get&Update profile info
 export function getProfileInfo(id) {
   return defaultRequest.get("profile/" + id).then(response => response.data);
 };
-
 export function updateProfileInfo(profileInfo) {
   return defaultRequest.put("profile", profileInfo).then(response => response.data);
+}
+
+//Update profile avatar
+export function updateProfileAvatar(newAvatarFile) {
+  let formData = new FormData();
+  formData.append("image", newAvatarFile);
+  return defaultRequest.put("profile/photo", formData, {
+    headers: {
+      'Content-Type': 'miltipart/form-data'
+    }
+  }).then(response => response.data);
 }
 
 // Get&Set profile status

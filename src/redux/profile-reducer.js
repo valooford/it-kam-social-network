@@ -1,7 +1,9 @@
-import { getProfileInfo, getProfileStatus, setProfileStatus, updateProfileInfo as profileInfoRequest } from "../api/api";
+import { getProfileInfo, getProfileStatus, setProfileStatus, 
+  updateProfileInfo as profileInfoRequest, updateProfileAvatar as profileAvatarRequest } from "../api/api";
 
 const SET_PROFILE_INFO = "profile/SET-PROFILE-INFO";
-const SET_STATUS_TEXT = "profile/SET-STATUS-TEXT"
+const SET_AVATAR = "profile/SET-AVATAR";
+const SET_STATUS_TEXT = "profile/SET-STATUS-TEXT";
 const ADD_POST = "profile/ADD-POST";
 
 const posts = [
@@ -22,6 +24,11 @@ function profileReducer (state = initialState, action) {
         ...state,
         profileInfo: action.profileInfo
       };
+    case SET_AVATAR:
+      return {
+        ...state,
+        profileInfo: { ...state.profileInfo, photos: { ...action.photos } }
+      }
     case SET_STATUS_TEXT:
       return {
         ...state,
@@ -73,6 +80,19 @@ export function updateProfileInfo(profileInfo, myId) {
       return dispatch(getProfileData(myId));
     }
     return Promise.reject("unknown error");
+  };
+}
+
+function setAvatar(photos) {
+  return { type: SET_AVATAR, photos };
+}
+
+export function updateProfileAvatar(newAvatarFile) {
+  return async (dispatch) => {
+    const data = await profileAvatarRequest(newAvatarFile);
+    if (data.resultCode === 0) {
+      dispatch(setAvatar(data.data.photos));
+    }
   };
 }
 

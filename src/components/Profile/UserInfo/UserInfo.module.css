@@ -15,8 +15,49 @@
 
 .avatar {
   float: left;
-  width: 140px;
+  position: relative;
   margin-right: 10px;
+  text-align: center;
+}
+
+.avatar__image {
+  display: block;
+  width: 140px;
+  height: 140px;
+}
+
+.avatar__upload {
+  position: absolute;
+  top: -0px;
+}
+
+.avatar__uploadButton {
+  width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.avatar__uploadButton:focus + label {
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+
+.avatar__uploadLabel {
+  display: none;
+  width: 140px;
+  padding-top: 110px;
+  line-height: 30px;
+
+  color: #fff;
+}
+
+.avatar__uploadLabel {cursor: pointer;}
+
+.avatar:hover .avatar__uploadLabel {
+  display: inline-block;
 }
 
 .name {
