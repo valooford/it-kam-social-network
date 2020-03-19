@@ -6,6 +6,7 @@ import { compose } from 'redux';
 
 function mapStateToProps(state) {
   return {
+    photo: state.profilePage.profileInfo.photos.small,
     posts: state.profilePage.posts
   };
 }

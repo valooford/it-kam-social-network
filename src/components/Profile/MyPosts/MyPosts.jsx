@@ -13,7 +13,7 @@ function MyPosts(props) {
       <div className={styles.sendForm}>
         <SendForm onSubmit={handleSendMessage} />
       </div>
-      {props.posts.map(p => <Post message={p.postText} key={p.id} />)}
+      {props.posts.map(p => <Post photo={props.photo} message={p.postText} key={p.id} />)}
     </div>
   );
 }
