@@ -17,10 +17,18 @@ function mapStateToProps(state) {
 }
 
 class ProfileContainer extends React.Component {
-  componentDidMount() {
+  loadProfileAndStatus = () => {
     let userId = this.props.match.params.userId || this.props.myId;
     this.props.getProfileData(userId);
     this.props.getUserStatus(userId);
+  }
+  componentDidMount() {
+    this.loadProfileAndStatus();
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.match.params.userId !== this.props.match.params.userId) {
+      this.loadProfileAndStatus();
+    }
   }
   render() {
     if (!this.props.match.params.userId && this.props.myId) return <Redirect to={"profile/" + this.props.myId} />;
