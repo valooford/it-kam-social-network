@@ -16,6 +16,11 @@ export function logout() {
   return defaultRequest.delete("auth/login").then(response => response.data);
 }
 
+//Get captcha-image URL
+export function getCaptchaURL() {
+  return defaultRequest.get("security/get-captcha-url").then(response => response.data);
+}
+
 // Get authentication info
 export function getAuthInfo() {
   return defaultRequest.get("auth/me").then(response => response.data);

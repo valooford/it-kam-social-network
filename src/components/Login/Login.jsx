@@ -16,6 +16,10 @@ function LoginForm(props) {
       <label>login: <Field component={ValidatedInput} validate={[required, maxLength30]} name="login" /></label><br />
       <label>password: <Field component={ValidatedInput} validate={[required, maxLength15]} type="password" name="password" /></label><br />
       <label><Field component="input" type="checkbox" name="rememberMe" /> remember me</label><br />
+      {props.captchaURL && <div>
+        <img src={props.captchaURL} alt='Unable to load Captcha' /><br/>
+        <Field component="input" name="captcha" placeholder='Type the symbols above...' />
+      </div>}
       <button>Enter</button>
       {props.error && <span className={styles.error}>{props.error}</span>}
     </form>
@@ -39,7 +43,7 @@ function Login(props) {
   return (
     <div>
       <h1 className={styles.h1}>Login</h1>
-      <LoginReduxForm onSubmit={handleSubmit} />
+      <LoginReduxForm onSubmit={handleSubmit} captchaURL={props.captchaURL} />
     </div>
   );
 }
@@ -47,7 +51,8 @@ function Login(props) {
 function mapStateToProps(state) {
   return {
     isAuthorized: state.auth.isAuthorized,
-    myId: state.auth.authData.id
+    myId: state.auth.authData.id,
+    captchaURL: state.auth.captchaURL
   };
 }
 
