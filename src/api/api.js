@@ -26,6 +26,10 @@ export function getProfileInfo(id) {
   return defaultRequest.get("profile/" + id).then(response => response.data);
 };
 
+export function updateProfileInfo(profileInfo) {
+  return defaultRequest.put("profile", profileInfo).then(response => response.data);
+}
+
 // Get&Set profile status
 export function getProfileStatus(id) {
   return defaultRequest.get("profile/status/" + id).then(response => response.data);

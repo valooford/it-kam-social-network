@@ -1,0 +1,30 @@
+.form {
+  position: absolute;
+  z-index: 10;
+  padding: 10px 15px;
+
+  color: black;
+  text-shadow: none;
+  background-color: #f1f1f1;
+  border-radius: 7px;
+}
+.form textarea {
+  resize: none;
+}
+.fields {
+  display: grid;
+  grid-template-columns: 150px 200px;
+  grid-row-gap: 5px;
+}
+.fields input[type='checkbox'] {
+  justify-self: end;
+}
+
+.error {
+  margin-left: 5px;
+  padding: 3px;
+  background-color: rgb(255, 228, 228);
+  border: 1px solid #e2c9c9;
+  border-radius: 5px;
+  font-size: 10px;
+}

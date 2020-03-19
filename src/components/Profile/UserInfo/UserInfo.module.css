@@ -1,9 +1,13 @@
-.userInfo {
+.container {
   position: absolute;
   margin-top: -160px;
   margin-left: 10px;
   display: inline-block;
   width: 50%;
+}
+
+.userInfo {
+  margin-left: 150px;
 
   color: white;
   text-shadow: 2px 2px 2px #000;
@@ -24,4 +28,37 @@
   margin-left: 10px;
   font-size: 20px;
   vertical-align: top;
+}
+
+.description {
+  min-height: 50px;
+  margin: 0;
+  padding: 16px 0;
+}
+
+.lookingForAJob > * {
+  vertical-align: middle;
+}
+
+.lookingForAJob__image {
+  width: 20px;
+  height: 20px;
+}
+
+.contacts {
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
+  list-style: none;
+}
+
+.contacts > li {
+  float: left;
+  
+  margin-right: 5px;
+}
+
+.contacts a {
+  color: inherit;
+  text-decoration: none;
 }

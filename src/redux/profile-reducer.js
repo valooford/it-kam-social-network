@@ -1,4 +1,4 @@
-import { getProfileInfo, getProfileStatus, setProfileStatus } from "../api/api";
+import { getProfileInfo, getProfileStatus, setProfileStatus, updateProfileInfo as profileInfoRequest } from "../api/api";
 
 const SET_PROFILE_INFO = "profile/SET-PROFILE-INFO";
 const SET_STATUS_TEXT = "profile/SET-STATUS-TEXT"
@@ -56,15 +56,28 @@ function setProfileInfo(profileInfo) {
   return { type: SET_PROFILE_INFO, profileInfo };
 }
 
-function setStatusText(statusText) {
-  return { type: SET_STATUS_TEXT, statusText };
-}
-
 export function getProfileData(userId) {
   return async (dispatch) => {
     const data = await getProfileInfo(userId);
     return dispatch(setProfileInfo(data));
   }
+}
+
+export function updateProfileInfo(profileInfo, myId) {
+  return async (dispatch) => {
+    const data = await profileInfoRequest(profileInfo);
+    if (data.resultCode === 1) {
+     
+      return Promise.reject(data.messages[0]);
+    } else if (data.resultCode === 0) {
+      return dispatch(getProfileData(myId));
+    }
+    return Promise.reject("unknown error");
+  };
+}
+
+function setStatusText(statusText) {
+  return { type: SET_STATUS_TEXT, statusText };
 }
 
 export function getUserStatus(id) {
