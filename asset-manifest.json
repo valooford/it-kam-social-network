@@ -1,31 +1,31 @@
 {
   "files": {
     "main.css": "/it-kam-social-network/static/css/main.68bea6a8.chunk.css",
-    "main.js": "/it-kam-social-network/static/js/main.2fd4615c.chunk.js",
-    "main.js.map": "/it-kam-social-network/static/js/main.2fd4615c.chunk.js.map",
-    "runtime-main.js": "/it-kam-social-network/static/js/runtime-main.4a50e01e.js",
-    "runtime-main.js.map": "/it-kam-social-network/static/js/runtime-main.4a50e01e.js.map",
-    "static/js/2.211fe4a0.chunk.js": "/it-kam-social-network/static/js/2.211fe4a0.chunk.js",
-    "static/js/2.211fe4a0.chunk.js.map": "/it-kam-social-network/static/js/2.211fe4a0.chunk.js.map",
-    "static/css/3.26495e6b.chunk.css": "/it-kam-social-network/static/css/3.26495e6b.chunk.css",
-    "static/js/3.6cd3bc4c.chunk.js": "/it-kam-social-network/static/js/3.6cd3bc4c.chunk.js",
-    "static/js/3.6cd3bc4c.chunk.js.map": "/it-kam-social-network/static/js/3.6cd3bc4c.chunk.js.map",
+    "main.js": "/it-kam-social-network/static/js/main.a09c278c.chunk.js",
+    "main.js.map": "/it-kam-social-network/static/js/main.a09c278c.chunk.js.map",
+    "runtime-main.js": "/it-kam-social-network/static/js/runtime-main.98538c42.js",
+    "runtime-main.js.map": "/it-kam-social-network/static/js/runtime-main.98538c42.js.map",
+    "static/js/2.3c4a45f1.chunk.js": "/it-kam-social-network/static/js/2.3c4a45f1.chunk.js",
+    "static/js/2.3c4a45f1.chunk.js.map": "/it-kam-social-network/static/js/2.3c4a45f1.chunk.js.map",
+    "static/css/3.f4fc4cb7.chunk.css": "/it-kam-social-network/static/css/3.f4fc4cb7.chunk.css",
+    "static/js/3.2ac3b1eb.chunk.js": "/it-kam-social-network/static/js/3.2ac3b1eb.chunk.js",
+    "static/js/3.2ac3b1eb.chunk.js.map": "/it-kam-social-network/static/js/3.2ac3b1eb.chunk.js.map",
     "static/css/4.4c305e9b.chunk.css": "/it-kam-social-network/static/css/4.4c305e9b.chunk.css",
-    "static/js/4.f605e795.chunk.js": "/it-kam-social-network/static/js/4.f605e795.chunk.js",
-    "static/js/4.f605e795.chunk.js.map": "/it-kam-social-network/static/js/4.f605e795.chunk.js.map",
+    "static/js/4.9c267c7e.chunk.js": "/it-kam-social-network/static/js/4.9c267c7e.chunk.js",
+    "static/js/4.9c267c7e.chunk.js.map": "/it-kam-social-network/static/js/4.9c267c7e.chunk.js.map",
     "index.html": "/it-kam-social-network/index.html",
-    "precache-manifest.539ee13e07ec3f920c44a6ddefebc2a2.js": "/it-kam-social-network/precache-manifest.539ee13e07ec3f920c44a6ddefebc2a2.js",
+    "precache-manifest.33216af6f56c64999a3a545b0e872a3a.js": "/it-kam-social-network/precache-manifest.33216af6f56c64999a3a545b0e872a3a.js",
     "service-worker.js": "/it-kam-social-network/service-worker.js",
-    "static/css/3.26495e6b.chunk.css.map": "/it-kam-social-network/static/css/3.26495e6b.chunk.css.map",
+    "static/css/3.f4fc4cb7.chunk.css.map": "/it-kam-social-network/static/css/3.f4fc4cb7.chunk.css.map",
     "static/css/4.4c305e9b.chunk.css.map": "/it-kam-social-network/static/css/4.4c305e9b.chunk.css.map",
     "static/css/main.68bea6a8.chunk.css.map": "/it-kam-social-network/static/css/main.68bea6a8.chunk.css.map",
-    "static/js/2.211fe4a0.chunk.js.LICENSE.txt": "/it-kam-social-network/static/js/2.211fe4a0.chunk.js.LICENSE.txt",
+    "static/js/2.3c4a45f1.chunk.js.LICENSE.txt": "/it-kam-social-network/static/js/2.3c4a45f1.chunk.js.LICENSE.txt",
     "static/media/dmitry.webp": "/it-kam-social-network/static/media/dmitry.37776cd5.webp"
   },
   "entrypoints": [
-    "static/js/runtime-main.4a50e01e.js",
-    "static/js/2.211fe4a0.chunk.js",
+    "static/js/runtime-main.98538c42.js",
+    "static/js/2.3c4a45f1.chunk.js",
     "static/css/main.68bea6a8.chunk.css",
-    "static/js/main.2fd4615c.chunk.js"
+    "static/js/main.a09c278c.chunk.js"
   ]
 }
