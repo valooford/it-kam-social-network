@@ -1,15 +1,12 @@
 import React from 'react';
-//import logo from './logo.svg';
 import './App.css';
 import HeaderContainer from './components/Header/HeaderContainer';
 import NavbarContainer from './components/Navbar/NavbarContainer';
-// import ProfileContainer from './components/Profile/ProfileContainer';
-// import DialogsContainer from './components/Dialogs/DialogsContainer';
 import UsersContainer from './components/UsersContainer/UsersContainer';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
-import { Route } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Login from './components/Login/Login';
 import { connect } from 'react-redux';
 import { initializeApp } from './redux/app-reducer';
@@ -34,13 +31,17 @@ class App extends React.Component {
         <HeaderContainer />
         <NavbarContainer />
         <div className='appWrapper__content'>
-          <Route path='/login' component={Login} />
-          <Route path='/profile/:userId?' render={withSuspense(ProfileContainer)} />
-          <Route path='/dialogs' render={withSuspense(DialogsContainer)} />
-          <Route path='/users/:pageNumber?' render={() => <UsersContainer />} />
-          <Route path='/news' component={News} />
-          <Route path='/music' component={Music} />
-          <Route path='/settings' component={Settings} />
+          <Switch>
+            <Redirect exact from="/" to="/profile" />
+            <Route path='/login' component={Login} />
+            <Route path='/profile/:userId?' render={withSuspense(ProfileContainer)} />
+            <Route path='/dialogs' render={withSuspense(DialogsContainer)} />
+            <Route path='/users/:pageNumber?' render={() => <UsersContainer />} />
+            <Route path='/news' component={News} />
+            <Route path='/music' component={Music} />
+            <Route path='/settings' component={Settings} />
+            <Route path='*' render={() => <div>404 NOT FOUND</div>} />
+          </Switch>
         </div>
       </div>
     );
