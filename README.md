@@ -2,9 +2,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## About
 
-This is Social Network project using [samuraijs.com](https://social-network.samuraijs.com) API.
-It's [available](https://valooford.github.io/it-kam-social-network) on GitHub Pages (API subscription time expires 06.17.2020)
-`login`: free@samuraijs.com
+This is Social Network project using [samuraijs.com](https://social-network.samuraijs.com) API.  
+It's [available](https://valooford.github.io/it-kam-social-network) on GitHub Pages (API subscription time expires 06.17.2020)  
+`login`: free@samuraijs.com  
 `password`: free
 
 ### What's ready
